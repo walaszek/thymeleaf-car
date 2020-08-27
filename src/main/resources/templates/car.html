@@ -5,10 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1>Hello</h1>
 <p>Hello car!!!</p>
-<p th:text="${car.getMark()}"></p>
-<p th:text="${car.getModel()}"></p>
+<tr th:each="car: ${cars}">
+    <td th:text="${car.getModel()}"/><br>
+    <td th:text="${car.getMark()}"/><br>
+    <p>--------------</p>
+</tr>
 
 
 </body>
